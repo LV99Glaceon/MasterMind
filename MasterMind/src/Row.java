@@ -8,22 +8,31 @@ import javax.swing.*;
 
 
 public class Row extends JPanel {
-	  private JButton Field1, Field2, Field3, Field4;
+	  private JButton Field1, Field2, Field3, Field4,Submit;
 	  private JTextField tekstvak;
 	  
 	  int Field1Colour;
 	  int Field2Colour;
 	  int Field3Colour;
 	  int Field4Colour;
+	  int Field1Value;
+	  int Field2Value;
+	  int Field3Value;
+	  int Field4Value;
+	  int Code1 = 3; 
+	  int Code2= 2;
+	  int Code3 =1 ; 
+	  int Code4 = 2; 
 	  int y = 50; 
 	  
 	public Row() {
 
 			setLayout(null);
-		    Field1 = new JButton( "" );
+		    Field1 = new JButton();
 		    Field1.setBounds(150,y,50,50);
 		    Field1.setBackground(Color.GRAY);
 		    Field1.addActionListener( new ColourChange1() );
+		    
 		    
 		    Field2 = new JButton( "" );
 		    Field2.setBounds(300,y,50,50);
@@ -40,13 +49,15 @@ public class Row extends JPanel {
 		    Field4.setBackground(Color.GRAY);
 		    Field4.addActionListener( new ColourChange4() );
 
-		    	
+		    Submit = new JButton("Submit");
+		    Submit.addActionListener( new Submit() );
+		    Submit.setBounds(700,y,100,40);
 		    
 		    add(Field1);
 		    add(Field2);
 		    add(Field3);
 		    add(Field4);
-
+		    add(Submit);
 		  }
 		  
 		  class ColourChange1 implements ActionListener {
@@ -55,21 +66,26 @@ public class Row extends JPanel {
 		      
 		     if (Field1Colour >= 5) {
 		    	 Field1Colour=0;
+		    	 Field1Value=0;
 		     }
 		     if (Field1Colour == 0) {
 		    	 Field1.setBackground(Color.GRAY);
 		     }
 		     else if (Field1Colour == 1) {
 		    	 Field1.setBackground(Color.BLUE);
+		    	 Field1Value=1; 
 		     }
 		     else if (Field1Colour == 2) {
 		    	 Field1.setBackground(Color.GREEN);
+		    	 Field1Value=2;
 		     }
 		     else if (Field1Colour == 3) {
 		    	 Field1.setBackground(Color.YELLOW);
+		    	 Field1Value=3;
 		     }
 		     else if (Field1Colour == 4) {
 		    	 Field1.setBackground(Color.RED);
+		    	 Field1Value=4;
 		     }
 		    }
 		  }
@@ -80,21 +96,26 @@ public class Row extends JPanel {
 			      
 			     if (Field2Colour >= 5) {
 			    	 Field2Colour=0;
+			    	 Field2Value=0;
 			     }
 			     if (Field2Colour == 0) {
 			    	 Field2.setBackground(Color.GRAY);
 			     }
 			     else if (Field2Colour == 1) {
 			    	 Field2.setBackground(Color.BLUE);
+			    	 Field2Value=1;
 			     }
 			     else if (Field2Colour == 2) {
 			    	 Field2.setBackground(Color.GREEN);
+			    	 Field2Value=2;
 			     }
 			     else if (Field2Colour == 3) {
 			    	 Field2.setBackground(Color.YELLOW);
+			    	 Field2Value=3;
 			     }
 			     else if (Field2Colour == 4) {
 			    	 Field2.setBackground(Color.RED);
+			    	 Field2Value=4;
 			     }
 			    }
 			  }
@@ -104,21 +125,26 @@ public class Row extends JPanel {
 			      
 			     if (Field3Colour >= 5) {
 			    	 Field3Colour=0;
+			    	 Field3Value=0;
 			     }
 			     if (Field3Colour == 0) {
 			    	 Field3.setBackground(Color.GRAY);
 			     }
 			     else if (Field3Colour == 1) {
 			    	 Field3.setBackground(Color.BLUE);
+			    	 Field3Value=1;
 			     }
 			     else if (Field3Colour == 2) {
 			    	 Field3.setBackground(Color.GREEN);
+			    	 Field3Value=2;
 			     }
 			     else if (Field3Colour == 3) {
 			    	 Field3.setBackground(Color.YELLOW);
+			    	 Field3Value=3;
 			     }
 			     else if (Field3Colour == 4) {
 			    	 Field3.setBackground(Color.RED);
+			    	 Field3Value=4;
 			     }
 			    }
 			  }
@@ -128,22 +154,80 @@ public class Row extends JPanel {
 			      
 			     if (Field4Colour >= 5) {
 			    	 Field4Colour=0;
+			    	 Field4Value=0;
 			     }
 			     if (Field4Colour == 0) {
 			    	 Field4.setBackground(Color.GRAY);
 			     }
 			     else if (Field4Colour == 1) {
 			    	 Field4.setBackground(Color.BLUE);
+			    	 Field4Value=1;
 			     }
 			     else if (Field4Colour == 2) {
 			    	 Field4.setBackground(Color.GREEN);
+			    	 Field4Value=2;
 			     }
 			     else if (Field4Colour == 3) {
 			    	 Field4.setBackground(Color.YELLOW);
+			    	 Field4Value=3;
 			     }
 			     else if (Field4Colour == 4) {
 			    	 Field4.setBackground(Color.RED);
+			    	 Field4Value=4;
 			     }
 			    }
 			  }
+		  class Submit implements ActionListener{
+			  public void actionPerformed (ActionEvent e) {
+				  
+				if (Field1Value == Code1) {
+					System.out.print("Correct1");
+				}
+				else if (Field1Value == Code2) {
+					System.out.print("Right Colour");
+				}
+				else if (Field1Value == Code3) {
+					System.out.print("Right Colour");
+				}
+				else if (Field1Value == Code4) {
+					System.out.print("Right Colour");
+				}
+				if (Field2Value == Code2) {
+					System.out.print("Correct2");
+				}
+				else if (Field2Value == Code1) {
+					System.out.print("Right Colour");
+				}
+				else if (Field2Value == Code3) {
+					System.out.print("Right Colour");
+				}
+				else if (Field2Value == Code4) {
+					System.out.print("Right Colour");
+				}
+				if (Field3Value == Code3) {
+					System.out.print("Correct3");
+				}
+				else if (Field3Value == Code2) {
+					System.out.print("Right Colour");
+				}
+				else if (Field3Value == Code3) {
+					System.out.print("Right Colour");
+				}
+				else if (Field3Value == Code4) {
+					System.out.print("Right Colour");
+				}
+				if (Field4Value == Code4) {
+					System.out.print("Correct4");
+				}
+				else if (Field4Value == Code2) {
+					System.out.print("Right Colour");
+				}
+				else if (Field4Value == Code3) {
+					System.out.print("Right Colour");
+				}
+				else if (Field4Value == Code1) {
+					System.out.print("Right Colour");
+				}
+			  }
+		  }
 }
