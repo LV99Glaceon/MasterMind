@@ -8,7 +8,7 @@ import javax.swing.*;
 
 
 public class Row extends JPanel {
-	  private JButton Field1, Field2, Field3, Field4,Submit;
+	  private JButton Field1, Field2, Field3, Field4,Submit,Checker1,Checker2,Checker3,Checker4;
 	  private JTextField tekstvak;
 	  
 	  int Field1Colour;
@@ -53,11 +53,31 @@ public class Row extends JPanel {
 		    Submit.addActionListener( new Submit() );
 		    Submit.setBounds(700,y,100,40);
 		    
+		    Checker1 = new JButton("");
+		    Checker1.setBounds(800,y,25,25);
+		    Checker1.setBackground(Color.GRAY);
+		    
+		    Checker2 = new JButton("");
+		    Checker2.setBounds(825,y,25,25);
+		    Checker2.setBackground(Color.GRAY);
+		    
+		    Checker3 = new JButton("");
+		    Checker3.setBounds(850,y,25,25);
+		    Checker3.setBackground(Color.GRAY);
+		    
+		    Checker4 = new JButton("");
+		    Checker4.setBounds(875,y,25,25);
+		    Checker4.setBackground(Color.GRAY);
+		    
 		    add(Field1);
 		    add(Field2);
 		    add(Field3);
 		    add(Field4);
 		    add(Submit);
+		    add(Checker1);
+		    add(Checker2);
+		    add(Checker3);
+		    add(Checker4);
 		  }
 		  
 		  class ColourChange1 implements ActionListener {
@@ -181,52 +201,52 @@ public class Row extends JPanel {
 			  public void actionPerformed (ActionEvent e) {
 				  
 				if (Field1Value == Code1) {
-					System.out.print("Correct1");
+					Checker1.setBackground(Color.WHITE);
 				}
 				else if (Field1Value == Code2) {
-					System.out.print("Right Colour");
+					Checker1.setBackground(Color.BLACK);
 				}
 				else if (Field1Value == Code3) {
-					System.out.print("Right Colour");
+					Checker1.setBackground(Color.BLACK);
 				}
 				else if (Field1Value == Code4) {
-					System.out.print("Right Colour");
+					Checker1.setBackground(Color.BLACK);
 				}
 				if (Field2Value == Code2) {
-					System.out.print("Correct2");
+					Checker2.setBackground(Color.WHITE);
 				}
 				else if (Field2Value == Code1) {
-					System.out.print("Right Colour");
+					Checker2.setBackground(Color.BLACK);
 				}
 				else if (Field2Value == Code3) {
-					System.out.print("Right Colour");
+					Checker2.setBackground(Color.BLACK);
 				}
 				else if (Field2Value == Code4) {
-					System.out.print("Right Colour");
+					Checker2.setBackground(Color.BLACK);
 				}
 				if (Field3Value == Code3) {
-					System.out.print("Correct3");
+					Checker3.setBackground(Color.WHITE);
 				}
 				else if (Field3Value == Code2) {
-					System.out.print("Right Colour");
+					Checker3.setBackground(Color.BLACK);
 				}
 				else if (Field3Value == Code3) {
-					System.out.print("Right Colour");
+					Checker3.setBackground(Color.BLACK);
 				}
 				else if (Field3Value == Code4) {
-					System.out.print("Right Colour");
+					Checker3.setBackground(Color.BLACK);
 				}
 				if (Field4Value == Code4) {
-					System.out.print("Correct4");
+					Checker4.setBackground(Color.WHITE);
 				}
 				else if (Field4Value == Code2) {
-					System.out.print("Right Colour");
+					Checker4.setBackground(Color.BLACK);
 				}
 				else if (Field4Value == Code3) {
-					System.out.print("Right Colour");
+					Checker4.setBackground(Color.BLACK);
 				}
 				else if (Field4Value == Code1) {
-					System.out.print("Right Colour");
+					Checker4.setBackground(Color.BLACK);
 				}
 			  }
 		  }
