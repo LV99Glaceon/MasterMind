@@ -7,17 +7,12 @@ public class ColourPins {
     ArrayList<String> colour_list = new ArrayList<String>(5);
 
 
-    colour_list.add("Yellow");
-    colour_list.add("Green");
-    colour_list.add("Red");
     colour_list.add("Blue");
+    colour_list.add("Green");
+    colour_list.add("Yellow");
+    colour_list.add("Red");
 	colour_list.add("White");
 	colour_list.add("Black");
-	    
-    for (int i = 0; i < 6; i++)
-      {
-         System.out.println(colour_list.get(i).toString());
-      }
     
   }
 } 
