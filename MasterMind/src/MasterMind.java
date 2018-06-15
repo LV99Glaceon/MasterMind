@@ -4,9 +4,11 @@ import javax.swing.*;
 
 public class MasterMind extends JFrame {
 
+	public static JFrame frame;
+	public static GameState Gamestate;
 	  public static void main( String[] args ) {
 
-	    JFrame frame = new MasterMind();
+	    frame = new MasterMind();
 	    frame.setSize( 1000,800 );
 	    frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 	    frame.setTitle( "MasterMind" );
@@ -23,7 +25,7 @@ public class MasterMind extends JFrame {
 	        row.Code4=Code4;
 		    frame.add( row);
 	    }
-	    
+	    Gamestate = new GameState();
 	    frame.setLayout(new GridLayout(0,1,0,0) );
 	    frame.setVisible( true );
 	 	  }

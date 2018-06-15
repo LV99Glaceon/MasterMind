@@ -10,7 +10,6 @@ import javax.swing.*;
 public class Row extends JPanel {
 	  private JButton Field1, Field2, Field3, Field4,Submit,Checker1,Checker2,Checker3,Checker4;
 	  private JTextField tekstvak;
-	  
 	  int Field1Colour;
 	  int Field2Colour;
 	  int Field3Colour;
@@ -19,10 +18,10 @@ public class Row extends JPanel {
 	  int Field2Value;
 	  int Field3Value;
 	  int Field4Value;
-	  int Code1 = 3; 
-	  int Code2= 2;
-	  int Code3 =1 ; 
-	  int Code4 = 2; 
+	  int Code1; 
+	  int Code2;
+	  int Code3; 
+	  int Code4; 
 	  int y = 50; 
 	  
 	public Row() {
@@ -80,6 +79,12 @@ public class Row extends JPanel {
 		    add(Checker4);
 		  }
 		  
+			class ResetHandler implements ActionListener {
+				public void actionPerformed (ActionEvent e) {
+				
+				}
+			}
+	
 		  class ColourChange1 implements ActionListener {
 		    public void actionPerformed( ActionEvent e ) {
 		      Field1Colour++;
@@ -200,6 +205,9 @@ public class Row extends JPanel {
 		  class Submit implements ActionListener{
 			  public void actionPerformed (ActionEvent e) {
 				Submit.setVisible(false);  
+				GameState.turnCount++;
+				GameState.checkGameState();
+				System.out.print(""+ GameState.turnCount);
 				if (Field1Value == Code1) {
 					Checker1.setBackground(Color.BLACK); //invert Black and White
 				}
