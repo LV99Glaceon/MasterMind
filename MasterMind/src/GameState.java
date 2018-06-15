@@ -6,6 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 
+
 public class GameState extends MasterMind {
 
 	public static int turnCount = 1;
@@ -28,7 +29,17 @@ public class GameState extends MasterMind {
 			d.setVisible(true);
 		}
 	}
+	public static void checkVictory() {
+		if (Row.victory)
+		{
+			System.out.println("display victory messsage");
+			JDialog v = new JDialog(frame, "You Cracked the Code!", true);
+			v.setBounds(400, 400, 400, 100);
+			v.setLocationRelativeTo(frame);
+			v.setVisible(true);
+		}
 	}
+
 
 class ResetHandler implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
@@ -39,4 +50,5 @@ class ResetHandler implements ActionListener {
 		String[] args = new String[0];
 		newMasterMind.main(args);
 	}
+}
 }

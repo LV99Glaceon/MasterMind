@@ -23,7 +23,7 @@ public class Row extends JPanel {
 	  int Code3; 
 	  int Code4; 
 	  int y = 50; 
-	  boolean victory = false; 
+	  static boolean victory = true; 
 	public Row() {
 
 			setLayout(null);
@@ -205,13 +205,14 @@ public class Row extends JPanel {
 		  class Submit implements ActionListener{
 			  public void actionPerformed (ActionEvent e) {
 				Submit.setVisible(false);  
-				if (Field1Value == Code1 && Field2Value == Code2 && Field3Value == Code3 && Field4Value == Code4); {
-				System.out.println("Code gekraakt!!");
-				victory = true; 
-				}
 				GameState.turnCount++;
 				GameState.checkGameState();
 				System.out.print(""+ GameState.turnCount);
+				if (Field1Value == Code1 && Field2Value == Code2 && Field3Value == Code3 && Field4Value == Code4) {
+				System.out.println("Code gekraakt!!");
+				victory = true; 
+				GameState.checkVictory();
+				}
 				if (Field1Value == Code1) {
 					Checker1.setBackground(Color.BLACK); //invert Black and White
 				}
