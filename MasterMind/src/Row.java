@@ -24,7 +24,7 @@ public class Row extends JPanel {
 	  int Code3 =1 ; 
 	  int Code4 = 2; 
 	  int y = 50; 
-	  
+	  boolean victory = false; 
 	public Row() {
 
 			setLayout(null);
@@ -200,6 +200,10 @@ public class Row extends JPanel {
 		  class Submit implements ActionListener{
 			  public void actionPerformed (ActionEvent e) {
 				Submit.setVisible(false);  
+				if (Field1Value == Code1 && Field2Value == Code2 && Field3Value == Code3 && Field4Value == Code4); {
+				System.out.println("Code gekraakt!!");
+				victory = true; 
+				}
 				if (Field1Value == Code1) {
 					Checker1.setBackground(Color.BLACK); //invert Black and White
 				}
