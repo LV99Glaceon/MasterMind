@@ -57,16 +57,16 @@ public class Row extends JPanel {
 		    Checker1.setBounds(800,y,25,25);
 		    Checker1.setBackground(Color.GRAY);
 		    
-		    Checker2 = new JButton("");
-		    Checker2.setBounds(825,y,25,25);
-		    Checker2.setBackground(Color.GRAY);
-		    
 		    Checker3 = new JButton("");
-		    Checker3.setBounds(850,y,25,25);
+		    Checker3.setBounds(825,y,25,25);
 		    Checker3.setBackground(Color.GRAY);
 		    
+		    Checker2 = new JButton("");
+		    Checker2.setBounds(800,y+25,25,25);
+		    Checker2.setBackground(Color.GRAY);
+		    
 		    Checker4 = new JButton("");
-		    Checker4.setBounds(875,y,25,25);
+		    Checker4.setBounds(825,y+25,25,25);
 		    Checker4.setBackground(Color.GRAY);
 		    
 		    add(Field1);
@@ -201,52 +201,52 @@ public class Row extends JPanel {
 			  public void actionPerformed (ActionEvent e) {
 				Submit.setVisible(false);  
 				if (Field1Value == Code1) {
-					Checker1.setBackground(Color.WHITE); //invert Black and White
+					Checker1.setBackground(Color.BLACK); //invert Black and White
 				}
 				else if (Field1Value == Code2) {
-					Checker1.setBackground(Color.BLACK);
+					Checker1.setBackground(Color.WHITE);
 				}
 				else if (Field1Value == Code3) {
-					Checker1.setBackground(Color.BLACK);
+					Checker1.setBackground(Color.WHITE);
 				}
 				else if (Field1Value == Code4) {
-					Checker1.setBackground(Color.BLACK);
+					Checker1.setBackground(Color.WHITE);
 				}
 				if (Field2Value == Code2) {
-					Checker2.setBackground(Color.WHITE);
+					Checker2.setBackground(Color.BLACK);
 				}
 				else if (Field2Value == Code1) {
-					Checker2.setBackground(Color.BLACK);
+					Checker2.setBackground(Color.WHITE);
 				}
 				else if (Field2Value == Code3) {
-					Checker2.setBackground(Color.BLACK);
+					Checker2.setBackground(Color.WHITE);
 				}
 				else if (Field2Value == Code4) {
-					Checker2.setBackground(Color.BLACK);
+					Checker2.setBackground(Color.WHITE);
 				}
 				if (Field3Value == Code3) {
-					Checker3.setBackground(Color.WHITE);
+					Checker3.setBackground(Color.BLACK);
 				}
 				else if (Field3Value == Code2) {
-					Checker3.setBackground(Color.BLACK);
+					Checker3.setBackground(Color.WHITE);
 				}
 				else if (Field3Value == Code3) {
-					Checker3.setBackground(Color.BLACK);
+					Checker3.setBackground(Color.WHITE);
 				}
 				else if (Field3Value == Code4) {
-					Checker3.setBackground(Color.BLACK);
+					Checker3.setBackground(Color.WHITE);
 				}
 				if (Field4Value == Code4) {
-					Checker4.setBackground(Color.WHITE);
+					Checker4.setBackground(Color.BLACK);
 				}
 				else if (Field4Value == Code2) {
-					Checker4.setBackground(Color.BLACK);
+					Checker4.setBackground(Color.WHITE);
 				}
 				else if (Field4Value == Code3) {
-					Checker4.setBackground(Color.BLACK);
+					Checker4.setBackground(Color.WHITE);
 				}
 				else if (Field4Value == Code1) {
-					Checker4.setBackground(Color.BLACK);
+					Checker4.setBackground(Color.WHITE);
 				}
 			  }
 		  }
