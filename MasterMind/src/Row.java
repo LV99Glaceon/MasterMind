@@ -199,9 +199,9 @@ public class Row extends JPanel {
 			  }
 		  class Submit implements ActionListener{
 			  public void actionPerformed (ActionEvent e) {
-				  
+				Submit.setVisible(false);  
 				if (Field1Value == Code1) {
-					Checker1.setBackground(Color.WHITE);
+					Checker1.setBackground(Color.WHITE); //invert Black and White
 				}
 				else if (Field1Value == Code2) {
 					Checker1.setBackground(Color.BLACK);
